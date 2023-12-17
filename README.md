@@ -53,7 +53,7 @@ Observations:
 2. To check for any duplicate trips we can use the distinct function in **ride_id**
 ![image](https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/afc13c12-8a73-489b-8771-0da05dde9ef4)
 
-Given all observations less distinct **ride_id**'s is equal to 0 indicating no null values, we know that **ride_id** is the primary key and there are no duplicate entries in **2022_trip_data_raw**. 
+Given count of all observations minus count of distinct **ride_id** is equal to 0, we know that **ride_id** is the primary key and there are no duplicate entries in **2022_trip_data_raw**. 
 
 3. **rideable_type and member_casual** input validation
 
