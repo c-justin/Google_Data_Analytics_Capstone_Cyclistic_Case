@@ -24,7 +24,7 @@ Guiding questions
 
 ## Prepare
 ### Data Source
-The [data source](https://divvy-tripdata.s3.amazonaws.com/index.html) for the analysis is Cyclistic's historical trip data spanning from January 2022 to December 2022. This data has been provided by Motivate International Inc. under a specific [license](https://divvybikes.com/data-license-agreement). It is considered public data and is being utilized to gain insights into the usage patterns of Cyclistic's bike ride-sharing service among customers.
+The [data source](https://divvy-tripdata.s3.amazonaws.com/index.html) for the analysis is Cyclistic's historical trip data spanning from January 2022 to December 2022. This data has been provided by Motivate International Inc. under this [license](https://divvybikes.com/data-license-agreement). It is considered public data and is being utilized to gain insights into the usage patterns of Cyclistic's bike ride-sharing service among customers.
 
 However, there are certain limitations to be acknowledged. Due to data privacy concerns, the analysis cannot incorporate personally identifiable information of riders. Consequently, it is not possible to link pass purchases to credit card numbers. This limitation means that the analysis won't be able to determine whether casual riders reside within Cyclistic's service area or if they have made multiple single-pass purchases. 
 
@@ -32,7 +32,19 @@ However, there are certain limitations to be acknowledged. Due to data privacy c
 I will utilize 12 csv files with the following naming convention: YYYYMM-divvy-tripdata. Each file includes the fields: ride_id, rideable_type, started_at, ended_at, start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng, and member_casual. 
 
 ## Process
-Given the worksheet limitation of 1,048,576 rows in Microsoft Excel we will be using BigQuery to clean and analyze the data which contains over 5.6 million rows. 
+Given the worksheet limitation of 1,048,576 rows in Microsoft Excel, we will be using BigQuery to clean and analyze the data which contains over 5.6 million rows. 
 
 ### Combining the Data
 To merge the 12 CSV files, I employed the batch upload operation in BigQuery. Initially, I uploaded all the files to a Google Cloud Storage bucket named gc_cyclist_data. Subsequently, I utilized the wildcard function to upload and append the content of the 12 CSV files into a single table named [2022_trip_data_raw](https://console.cloud.google.com/bigquery?hl=en&project=voltaic-spider-405020&ws=!1m5!1m4!4m3!1svoltaic-spider-405020!2sCyclist_Data!3s2022_trip_data_raw). This approach was feasible due to the consistent schema across all files.
+
+### Data Exploration
+
+Before cleaning the data, I review the data to understand the following: 
+* What data types and inputs are present?
+* What is my primary key?
+* Are there any potential calculations/logic errors that may arise?
+
+Observations: 
+1. The **ride_id** field is the primary key and is a unique identifier for all observations.
+2. The **start_station_name, start_station_id, end_station_name, end_station_id, end_lat,end_lng** fields contained null values 
+
