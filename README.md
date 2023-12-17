@@ -55,7 +55,9 @@ Observations:
 
 Given count of all observations minus count of distinct **ride_id** is equal to 0, we know that **ride_id** is the primary key and there are no duplicate entries in **2022_trip_data_raw**. 
 
-3. **rideable_type and member_casual** input validation
+3. Primary key input validation. All **ride_id** values are consistent and have a length of 16.
+
+4. **rideable_type and member_casual** input validation
 
 ![image](https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/213bf0e2-5b9b-44d2-96b8-4edc8d6748a7)
 
