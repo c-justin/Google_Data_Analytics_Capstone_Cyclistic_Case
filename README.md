@@ -45,6 +45,10 @@ Before cleaning the data, I review the data to understand the following:
 * Are there any potential calculations/logic errors that may arise?
 
 Observations: 
-1. The **ride_id** field is the primary key and is a unique identifier for all observations.
-2. The **start_station_name, start_station_id, end_station_name, end_station_id, end_lat,end_lng** fields contained null values 
+1. The following table contains a count of all null values
+![image](https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/8b34653e-6fd8-4ae3-8e30-8b96f606d4c2)
+**start_station_id, end_station_name, end_station_id, end_lat,end_lng** fields contained null values indicating trips that were not recorded or may have not been completed at the time of data gathering
+
+![image](https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/afc13c12-8a73-489b-8771-0da05dde9ef4)
+Given all observations less distinct **ride_id**'s is equal to 0 indicating no null values, we know that **ride_id** is the primary key and there are no duplicate entries in **2022_trip_data_raw**. 
 
