@@ -82,11 +82,13 @@ Given that the count of all observations minus the count of distinct **ride_id**
 SQL Query: [Data Cleaning](https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/blob/main/2.%20Data%20Cleaning)
 
 Cleaning Criteria
-1. Added 3 columns: ride_length_minutes, day_of_week and month
-2. Remove all rows with any null values and trip durations less than or equal to 1 minute
+1. Added 3 fields: ride_length_minutes, day_of_week and month
+2. Remove all observations containing null values and trip durations equal/less than 60 seconds or over/equal to 24 hours.
+
+A total of 1,375,073 observations were removed.
 
 
-A total of 1,375,756 observations were removed.
+### Analyze
 
 
 
