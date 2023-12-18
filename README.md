@@ -71,11 +71,12 @@ There are 2 types of riders: casual and member.
 
 
 ### Data Cleaning
-SQL Query: [Data Cleaning] ()
+SQL Query: [Data Cleaning](https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/blob/main/2.%20Data%20Cleaning)
 
 Cleaning Criteria
 1. Remove all rows with any null values and trip durations less than or equal to 1 minute
 2. Added 3 columns, ride_length_minutes, day_of_week and month
+
 A total of 1,375,756 observations were removed.
 
 
