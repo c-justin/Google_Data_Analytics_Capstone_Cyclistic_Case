@@ -39,6 +39,8 @@ To merge the 12 CSV files, I employed the batch upload operation in BigQuery. In
 
 ### Data Exploration
 
+SQL Query: [Data Exploration and Validation](https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/commit/b848d4154ad38c3e95d1bd90430c7d07137b9290)
+
 Before cleaning the data, I review the data to understand the following: 
 * What data types and inputs are present?
 * What is my primary key?
@@ -67,7 +69,7 @@ Given count of all observations minus the count of distinct **ride_id** is equal
 
 There are 2 types of riders: casual and member.
 
-5. Of the fields missing values there are a total of 1,298,257 observations that need to be deleted.
+5. Of the fields missing values there are a total of 1,298,665 observations that need to be deleted based on null values or trip durations equal to or less than 0 seconds.
 
 ### Data Cleaning
 
