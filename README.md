@@ -14,8 +14,7 @@ Lily Moreno, the director of marketing and manager, plays a crucial role in deve
 
 ## Ask 
 
-- [x] Business Task
-How to convert more casual riders into annual members by designing a specific and targeted marketing strategy. 
+- [x] Business Task: How to convert more casual riders into annual members by designing a specific and targeted marketing strategy. 
 
 Guiding questions
 1. How do annual members and casual riders use Cyclistic bikes differently?
@@ -74,8 +73,9 @@ There are 2 types of riders: casual and member.
 SQL Query: [Data Cleaning](https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/blob/main/2.%20Data%20Cleaning)
 
 Cleaning Criteria
-1. Remove all rows with any null values and trip durations less than or equal to 1 minute
-2. Added 3 columns, ride_length_minutes, day_of_week and month
+1. Added 3 columns: ride_length_minutes, day_of_week and month
+2. Remove all rows with any null values and trip durations less than or equal to 1 minute
+
 
 A total of 1,375,756 observations were removed.
 
