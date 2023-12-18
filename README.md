@@ -48,12 +48,12 @@ Observations:
 1. The following table contains a count of all null values
 ![image](https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/8b34653e-6fd8-4ae3-8e30-8b96f606d4c2)
 
-**start_station_id, end_station_name, end_station_id, end_lat,end_lng** fields contain null values indicating trips that were not recorded or may have not been completed at the time of data gathering. These rows will need to be removed during the cleaning stage.
+**start_station_id, end_station_name, end_station_id, end_lat,end_lng** fields contain null values. This could potentially be from trips that were not recorded correctly or may have not been completed at the time of data gathering. These rows will need to be removed during the cleaning stage.
 
 2. To check for any duplicate trips we can use the distinct function in **ride_id**
 ![image](https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/afc13c12-8a73-489b-8771-0da05dde9ef4)
 
-Given count of all observations minus count of distinct **ride_id** is equal to 0, we know that **ride_id** is the primary key and there are no duplicate entries in **2022_trip_data_raw**. 
+Given count of all observations minus the count of distinct **ride_id** is equal to 0, we know that **ride_id** is the primary key and there are no duplicate entries in **2022_trip_data_raw**. 
 
 3. Primary key input validation. All **ride_id** values are consistent and have a length of 16.
 
@@ -66,6 +66,12 @@ Given count of all observations minus count of distinct **ride_id** is equal to 
 ![image](https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/c93fb317-fa06-43c5-b027-e3cf93b3cfa2)
 
 There are 2 types of riders: casual and member.
+
+5. Of the fields missing values there are a total of 1,298,257 observations that need to be deleted.
+
+### Data Cleaning
+
+
 
 
 
