@@ -17,7 +17,7 @@ SELECT
   count(*) - count(member_casual) as member_casual,
 FROM `voltaic-spider-405020.Cyclist_Data.2022_trip_data_raw` 
 
--- Checking to see if all ride IDs are 16 digits
+-- ride_id validation, check for consistency
 
 SELECT 
   LENGTH(ride_id) as ride_id_length,
@@ -34,10 +34,10 @@ SELECT
   distinct(member_casual) as ride_types
 From `voltaic-spider-405020.Cyclist_Data.2022_trip_data_raw` 
 
--- Identifying number of null observations that need to be deleted
+-- Trip length validation, I am choosing to exclude all trips less than 1 minute or over 1 day
 SELECT
-  count(ride_id) as num_of_null_observations
+ COUNT(datetime_diff(ended_at,started_at, minute)) as trip_invalid,
 FROM `voltaic-spider-405020.Cyclist_Data.2022_trip_data_raw` 
 WHERE
-  start_station_id IS NULL or start_station_name IS NULL OR end_station_id IS NULL OR end_station_name IS NULL OR end_lat IS NULL OR end_lng IS NULL;
-
+  datetime_diff(ended_at,started_at,second)<=0 or
+  datetime_diff(ended_at,started_at,hour) >= 24
