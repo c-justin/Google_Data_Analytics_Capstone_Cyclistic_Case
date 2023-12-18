@@ -69,7 +69,7 @@ Given count of all observations minus the count of distinct **ride_id** is equal
 
 There are 2 types of riders: casual and member.
 
-5. Of the fields missing values there are a total of 1,298,665 observations that need to be deleted based on null values or trip durations equal to or less than 0 seconds.
+5. Of the fields missing values there are a total of 1,365,008 observations that need to be deleted based on null values or trip durations less than 1 minute.
 
 ### Data Cleaning
 
