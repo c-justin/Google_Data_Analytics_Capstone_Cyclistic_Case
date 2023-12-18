@@ -76,7 +76,7 @@ SQL Query: [Data Cleaning] ()
 Cleaning Criteria
 1. Remove all rows with any null values and trip durations less than or equal to 1 minute
 2. Added 3 columns, ride_length_minutes, day_of_week and month
-3. A total of 
+A total of 1,375,756 observations were removed.
 
 
 
