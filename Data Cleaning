@@ -1,0 +1,58 @@
+-- Data cleaning
+
+-- Adding ride_length_minutes, day_of_week and month fields
+-- Removed all observations containing null values and trip durations less than or equal to 1 minute
+CREATE TABLE IF NOT EXISTS `voltaic-spider-405020.Cyclist_Data.2022_trip_data_clean` AS (
+  SELECT
+    ride_id,
+    rideable_type,
+    datetime_diff(ended_at,started_at,minute) as ride_length_minutes,
+    CASE EXTRACT(DAYOFWEEK FROM started_At)
+      WHEN 1 THEN 'SUN'
+      WHEN 2 THEN 'MON'
+      WHEN 3 THEN 'TUE'
+      WHEN 4 THEN 'WED'
+      WHEN 5 THEN 'THU'
+      WHEN 6 THEN 'FRI'
+      WHEN 7 THEN 'SAT'
+      END AS day_of_week,
+    CASE EXTRACT(MONTH FROM started_at)
+      WHEN 1 THEN 'JAN'
+      WHEN 2 THEN 'FEB'
+      WHEN 3 THEN 'MAR'
+      WHEN 4 THEN 'APR'
+      WHEN 5 THEN 'MAY'
+      WHEN 6 THEN 'JUN'
+      WHEN 7 THEN 'JUL'
+      WHEN 8 THEN 'AUG'
+      WHEN 9 THEN 'SEP'
+      WHEN 10 THEN 'OCT'
+      WHEN 11 THEN 'NOV'
+      WHEN 12 THEN 'DEC'
+    END AS month,
+    start_station_name,
+    end_station_name,
+    start_lat,
+    start_lng,
+    end_lat,
+    end_lng,
+    member_casual
+  FROM voltaic-spider-405020.Cyclist_Data.2022_trip_data_raw
+  WHERE 
+    start_station_id IS NOT NULL AND
+    start_station_name IS NOT NULL AND
+    end_station_id IS NOT NULL AND 
+    end_station_name IS NOT NULL AND
+    end_lat IS NOT NULL AND
+    end_lng IS NOT NULL AND
+    datetime_diff(ended_at,started_at, second) >60
+);
+
+  -- Checking how many observations were removed by generating counts from raw versus clean data set
+SELECT
+  COUNT(*) 
+FROM voltaic-spider-405020.Cyclist_Data.2022_trip_data_clean
+
+SELECT 
+  COUNT(*)
+FROM voltaic-spider-405020.Cyclist_Data.2022_trip_data_raw
