@@ -1,0 +1,43 @@
+-- Data Exploration
+
+-- Number of observations in field vs data set, looking for null values and primary key validation
+SELECT 
+  count(*) - count(distinct(ride_id)) as ride_id,
+  count(*) - count(rideable_type) as rideable_type,
+  count(*) - count(started_at) as started_at,
+  count(*) - count(ended_at) as ended_at,
+  count(*) - count(start_station_name) as start_station_name,
+  count(*) - count(start_station_id) as start_station_id,
+  count(*) - count(end_station_name) as end_station_name,
+  count(*) - count (end_station_id) as end_station_id,
+  count(*) - count(start_lat) as start_lat,
+  count(*) - count(start_lng) as start_lng,
+  count(*) - count(end_lat) as end_lat,
+  count(*) - count(end_lng) as end_lng,
+  count(*) - count(member_casual) as member_casual,
+FROM `voltaic-spider-405020.Cyclist_Data.2022_trip_data_raw` 
+
+-- Checking to see if all ride IDs are 16 digits
+
+SELECT 
+  LENGTH(ride_id) as ride_id_length,
+  count(ride_id) as num_of_rides
+FROM `voltaic-spider-405020.Cyclist_Data.2022_trip_data_raw` 
+group by (ride_id_length)
+
+-- String input validation
+SELECT
+  distinct(rideable_type) as ride_types
+From `voltaic-spider-405020.Cyclist_Data.2022_trip_data_raw` 
+
+SELECT
+  distinct(member_casual) as ride_types
+From `voltaic-spider-405020.Cyclist_Data.2022_trip_data_raw` 
+
+-- Identifying number of null observations that need to be deleted
+SELECT
+  count(ride_id) as num_of_null_observations
+FROM `voltaic-spider-405020.Cyclist_Data.2022_trip_data_raw` 
+WHERE
+  start_station_id IS NULL or start_station_name IS NULL OR end_station_id IS NULL OR end_station_name IS NULL OR end_lat IS NULL OR end_lng IS NULL;
+
