@@ -65,7 +65,7 @@ Given count of all observations minus count of distinct **ride_id** is equal to 
 
 ![image](https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/c93fb317-fa06-43c5-b027-e3cf93b3cfa2)
 
-There are 2 types of riders: Casual and Member.
+There are 2 types of riders: casual and member.
 
 
 
