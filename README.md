@@ -49,24 +49,33 @@ Observations:
 1. The following table contains a count of all null values
 ![image](https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/8b34653e-6fd8-4ae3-8e30-8b96f606d4c2)
 
-**start_station_id, end_station_name, end_station_id, end_lat,end_lng** fields contain null values. This could potentially be from trips that were not recorded correctly or may have not been completed at the time of data gathering. These rows will need to be removed during the cleaning stage.
+**start_station_id, end_station_name, end_station_id, end_lat,end_lng** fields contain null values. This could be from trips that were not recorded correctly or may not have been completed at the time of data gathering. These rows will need to be removed during the cleaning stage.
 
 2. To check for any duplicate trips we can use the distinct function in **ride_id**
 ![image](https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/afc13c12-8a73-489b-8771-0da05dde9ef4)
 
-Given count of all observations minus the count of distinct **ride_id** is equal to 0, we know that **ride_id** is the primary key and there are no duplicate entries in **2022_trip_data_raw**. 
+Given that the count of all observations minus the count of distinct **ride_id** is equal to 0, we know that **ride_id** is the primary key and there are no duplicate entries in **2022_trip_data_raw**. 
 
-3. Primary key input validation. All **ride_id** values are consistent and have a length of 16.
+3. Input Validation
 
-4. **rideable_type and member_casual** input validation
+![image](https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/d687f1a3-1042-4e3e-8652-23d9a4f96ca5)
+
+   **ride_id** All values are consistent and have a length of 16.
+
 
 ![image](https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/213bf0e2-5b9b-44d2-96b8-4edc8d6748a7)
 
-3 types of bikes account for all trips: electric_bike, classic_bike, docked_bike
+**rideable_type** 3 types of bikes account for all trips: electric_bike, classic_bike, and docked_bike.
+
 
 ![image](https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/c93fb317-fa06-43c5-b027-e3cf93b3cfa2)
 
-There are 2 types of riders: casual and member.
+**member_casual** 2 types of rides account for all trips: casual and member.
+
+
+![image](https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/6dac5e7f-3910-4136-9da6-65deed4a3cf2)
+
+**ride_length_minutes** There were 5891 trips under 1 minute or over 24 hours. Trips under 1 minute were excluded to account for riders who were testing the service or started a trip and changed their minds. Trips over 24 hours were excluded to account for riders who did not return bikes because they forgot, chose not to, or were not recognized by the docking station. 
 
 
 ### Data Cleaning
