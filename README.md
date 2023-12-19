@@ -82,13 +82,24 @@ Given that the count of all observations minus the count of distinct **ride_id**
 SQL Query: [Data Cleaning](https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/blob/main/2.%20Data%20Cleaning)
 
 Cleaning Criteria
-1. Added 3 fields: ride_length_minutes, day_of_week and month
+1. Added 4 fields: ride_length_minutes, day_of_week, month and hour
 2. Remove all observations containing null values and trip durations equal/less than 60 seconds or over/equal to 24 hours.
 
 A total of 1,375,073 observations were removed.
+A total of 4,292,644 observations remain. 
 
 
-### Analyze
+## Analyze
+SQL Query:
+Tableau Visualization: 
+
+Using the cleaned data set I queried tables to analyze the difference in each field type and visualized them in Tableau. Following the guiding questions, we first take a look at how casual riders differ from annual members in the following: 
+
+### Types of Bikes Used in 2022
+
+### Total Trips by Month, Day, and Time of Day
+
+### Ride length by month, day of week, and time of day
 
 
 
