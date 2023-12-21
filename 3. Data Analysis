@@ -1,0 +1,106 @@
+-- Data Analysis
+
+-- Difference in bike types sorted by casual or member
+DROP TABLE IF EXISTS `voltaic-spider-405020.Cyclist_Data.2022_ride_type`;
+CREATE TABLE IF NOT EXISTS `voltaic-spider-405020.Cyclist_Data.2022_ride_type` AS(
+SELECT  
+  rideable_type,
+  member_casual,
+  count(*) as trip_total
+FROM `voltaic-spider-405020.Cyclist_Data.2022_trip_data_clean` 
+GROUP BY rideable_type, member_casual
+);
+
+-- Number of trips per month, day and time of day
+DROP TABLE IF EXISTS `voltaic-spider-405020.Cyclist_Data.2022_trip_count_month`;
+CREATE TABLE IF NOT EXISTS `voltaic-spider-405020.Cyclist_Data.2022_trip_count_month` AS(
+SELECT
+  month,
+  member_casual,
+  count(ride_id) as total_trips,
+FROM `voltaic-spider-405020.Cyclist_Data.2022_trip_data_clean`
+GROUP BY month,member_casual
+ORDER BY member_casual
+);
+
+DROP TABLE IF EXISTS `voltaic-spider-405020.Cyclist_Data.2022_trip_count_day`;
+CREATE TABLE IF NOT EXISTS `voltaic-spider-405020.Cyclist_Data.2022_trip_count_day` AS(
+SELECT 
+  day_of_week,
+  member_casual,
+  count(ride_id) as trip_count
+FROM `voltaic-spider-405020.Cyclist_Data.2022_trip_data_clean`
+GROUP BY day_of_week,member_casual
+ORDER BY member_casual
+);
+
+DROP TABLE IF EXISTS `voltaic-spider-405020.Cyclist_Data.2022_trip_count_time`;
+CREATE TABLE IF NOT EXISTS `voltaic-spider-405020.Cyclist_Data.2022_trip_count_time` AS(
+SELECT
+  EXTRACT(hour FROM started_at) as starting_hour,
+  member_casual,
+  count(ride_id) as trip_count
+FROM `voltaic-spider-405020.Cyclist_Data.2022_trip_data_clean` 
+GROUP BY starting_hour,member_casual
+ORDER BY starting_hour
+);
+
+-- Average length of trip by month, day and time of day 
+DROP TABLE IF EXISTS `voltaic-spider-405020.Cyclist_Data.2022_trip_length_month`;
+CREATE TABLE IF NOT EXISTS `voltaic-spider-405020.Cyclist_Data.2022_trip_length_month` AS(
+SELECT
+  month,
+  member_casual,
+  avg(ride_length_minutes) as trip_length_avg_month,
+FROM `voltaic-spider-405020.Cyclist_Data.2022_trip_data_clean` 
+GROUP BY month,member_casual
+ORDER BY month
+);
+
+
+DROP TABLE IF EXISTS `voltaic-spider-405020.Cyclist_Data.2022_trip_length_day`;
+CREATE TABLE IF NOT EXISTS `voltaic-spider-405020.Cyclist_Data.2022_trip_length_day` AS(
+SELECT
+  day_of_week,
+  member_casual,
+  avg(ride_length_minutes) as trip_length_avg_day
+FROM `voltaic-spider-405020.Cyclist_Data.2022_trip_data_clean` 
+GROUP BY day_of_week, member_casual
+ORDER BY day_of_week
+);
+
+DROP TABLE IF EXISTS `voltaic-spider-405020.Cyclist_Data.2022_trip_length_time`;
+CREATE TABLE IF NOT EXISTS `voltaic-spider-405020.Cyclist_Data.2022_trip_length_time` AS(
+SELECT
+  EXTRACT(HOUR FROM started_at) AS hour,
+  member_casual,
+  avg(ride_length_minutes) as trip_length_hour
+FROM `voltaic-spider-405020.Cyclist_Data.2022_trip_data_clean` 
+GROUP BY hour, member_casual
+ORDER BY hour
+);
+
+-- Trips by start and end locations
+DROP TABLE IF EXISTS `voltaic-spider-405020.Cyclist_Data.2022_trip_start_location`;
+CREATE TABLE IF NOT EXISTS `voltaic-spider-405020.Cyclist_Data.2022_trip_start_location` AS(
+SELECT
+  start_station_name,
+  start_lat,
+  start_lng,
+  member_casual,
+  count(ride_id) as num_of_trips
+FROM `voltaic-spider-405020.Cyclist_Data.2022_trip_data_clean` 
+GROUP BY start_station_name,start_lat,start_lng,member_casual
+);
+
+DROP TABLE IF EXISTS `voltaic-spider-405020.Cyclist_Data.2022_trip_end_location`;
+CREATE TABLE IF NOT EXISTS `voltaic-spider-405020.Cyclist_Data.2022_trip_end_location` AS(
+SELECT
+  end_station_name,
+  end_lat,
+  end_lng,
+  member_casual,
+  count(ride_id) as num_of_trips
+FROM `voltaic-spider-405020.Cyclist_Data.2022_trip_data_clean` 
+GROUP BY end_station_name,end_lat,end_lng,member_casual
+);
