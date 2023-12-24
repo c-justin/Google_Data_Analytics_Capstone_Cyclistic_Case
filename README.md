@@ -124,19 +124,40 @@ From the above time frames, we gather that both types of members are greatly aff
 
 ### Ride length by month, day of week, and time of day
 Next, the average length of each trip in minutes is plotted against the month, day of the week, and hour of the day.
-<img width="1396" alt="image" src="https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/811a44ae-58fc-4fe2-930f-38c894313a07">
+<img width="1396" alt="image" src="https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/888fe8f6-6966-419e-83b7-6b8f0528fa72">
+
 
 
 #### Month 
 Looking at the average trip duration in minutes, we notice that for annual members, trip duration remains constant, slightly increasing in the summer months. Trip duration for casual members is consistently higher throughout all months, peaks in May, and gradually tapers off at the end of the year. 
 
 #### Day of Week
-For annual members, trip duration by day of the week remains constant throughout the weekdays and slightly increases on the weekend. Casual members have trip durations consistently higher, with slightly elevated levels from Saturday to Monday. 
+For annual members, trip duration by day of the week remains constant throughout the weekdays and slightly increases on the weekend. Casual members have trip durations consistently higher throughout the entire week, with slightly elevated levels from Saturday to Monday. 
 
 #### Hour of Day 
-Annual members exhibit a similar trend in trip duration throughout the hours of the day with 
+Annual members exhibit a consistent trip duration throughout the hours of the day. Casual members display a moderate increase between 8 am to 5 pm with a slight drop off at 5 pm that is sustained until 3 am. 
+
+#### Key Insights
+Trip duration for annual members does not vary significantly between time frames. Casual member trip durations are consistently longer throughout all time frames. The difference in trip durations is in line with the nature of commutes for annual members and leisure trips for casual riders.  
 
 
+## Act
+
+### Summary
+
+| Member | Casual|
+| --- | --- |
+| Classic and Electric | Docked |
+|  |  |
+| Generally prefers trips on the weekdays and between the hours of 8 am to 5 pm | Trip count increases significantly over the weekends and steadily increases from 8 am to 5 pm |
+|  |  |
+| Travels more frequently but with average trip durations much shorter at approximately half the duration of casual riders | Travels less frequently in general, peaks on weekends, and has an average trip duration twice that of annual members |
+
+### Recommendations 
+
+1. Marketing campaigns should be targeted towards casual riders in the spring and summer with a focus on weekends. Can offer early bird discounts to incentivize subscriptions in the late winter/early spring to offset seasonality.
+2. Causl riders generally have longer trip durations and seldom use the service on weekdays, offering a weekend pass or flat rate bulk discount would be effective. 
+3. The most effective deployment of ad spend would be to users of classic and electric bikes, docked bikes have no utility in converting members
 
 
 
