@@ -93,7 +93,7 @@ A total of 4,291,805 observations remain.
 
 SQL Query: [Data Analysis](https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/blob/main/3.%20Data%20Analysis)
 
-Tableau Visualization: [Dashboards] (https://public.tableau.com/app/profile/justin.chiu5869/viz/GDACTableau_17031313922010/RideType)
+Tableau Visualization: [Dashboards](https://public.tableau.com/app/profile/justin.chiu5869/viz/GDACTableau_17031313922010/RideType)
 
 Using the cleaned data set I queried tables to analyze the difference in each field type and visualized them in Tableau. Following the guiding questions, we first take a look at how casual riders differ from annual members in the following: 
 
