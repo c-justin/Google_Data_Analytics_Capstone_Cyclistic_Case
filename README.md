@@ -99,6 +99,8 @@ Utilizing the cleaned dataset, I conducted table queries to analyze distinctions
 
 ### Types of Bikes Used in 2022
 I first examined the percentage of users based on each type of bike, further segmented by member type, with blue representing casual riders and orange representing annual members.
+
+
 <img width="1401" alt="image" src="https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/cfccb57e-fb0e-44b2-9b66-031cae0eab10">
 
 Out of the 4,292,644 cleaned observations remaining, 59.67% are annual members, and 40.33% are casual users. These percentages represent the total number of riders in 2022. Annual members exclusively prefer classic or electric bikes and show no interest in docked bikes whatsoever. 
@@ -106,6 +108,8 @@ Out of the 4,292,644 cleaned observations remaining, 59.67% are annual members, 
 
 ### Total Trips by Month, Day, and Time of Day
 Next, I plotted the number of trips per month, day of the week, and hour of the day, using a blue line for casual riders and an orange line for members. 
+
+
 <img width="1404" alt="image" src="https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/5afcbbe7-bf89-4682-bbf1-9c0b39f50774">
 
 #### Month 
@@ -124,6 +128,8 @@ From the above time frames, we gather that both types of members are greatly aff
 
 ### Ride length by month, day of week, and time of day
 Next, the average length of each trip in minutes is plotted against the month, day of the week, and hour of the day.
+
+
 <img width="1396" alt="image" src="https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/888fe8f6-6966-419e-83b7-6b8f0528fa72">
 
 
