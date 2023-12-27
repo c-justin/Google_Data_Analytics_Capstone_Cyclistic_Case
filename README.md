@@ -95,30 +95,30 @@ SQL Query: [Data Analysis](https://github.com/c-justin/Google_Data_Analytics_Cap
 
 Tableau Visualization: [Dashboards](https://public.tableau.com/app/profile/justin.chiu5869/viz/GDACTableau_17031313922010/RideType)
 
-Using the cleaned data set I queried tables to analyze the difference in each field type and visualized them in Tableau. Following the guiding questions, we first take a look at how casual riders differ from annual members in the following: 
+Utilizing the cleaned dataset, I conducted table queries to analyze distinctions across various field types. The findings were subsequently visualized in Tableau. In line with guiding questions, our initial exploration centers on understanding the disparities between casual riders and annual members. Key aspects under consideration include:
 
 ### Types of Bikes Used in 2022
-I first examined the percentage of users based on each type of bike, further segmented by member type with blue representing casual riders and orange for annual members. 
+I first examined the percentage of users based on each type of bike, further segmented by member type, with blue representing casual riders and orange representing annual members.
 <img width="1401" alt="image" src="https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/cfccb57e-fb0e-44b2-9b66-031cae0eab10">
 
-Of the 4,292,644 cleaned observations remaining, 59.67% of users are annual members and 40.33% are casual users. The percentages shown above are part of the total number of riders in 2022. Annual members exclusively prefer classic or electric bikes and were not interested in docked bikes whatsoever. 
+Out of the 4,292,644 cleaned observations remaining, 59.67% are annual members, and 40.33% are casual users. These percentages represent the total number of riders in 2022. Annual members exclusively prefer classic or electric bikes and show no interest in docked bikes whatsoever. 
 
 
 ### Total Trips by Month, Day, and Time of Day
-Next, I plotted the number of trips per month, day of the week, and hour of the day with the blue line for casual riders and the orange line for members. 
+Next, I plotted the number of trips per month, day of the week, and hour of the day, using a blue line for casual riders and an orange line for members. 
 <img width="1404" alt="image" src="https://github.com/c-justin/Google_Data_Analytics_Capstone_Cyclistic_Case/assets/151407442/5afcbbe7-bf89-4682-bbf1-9c0b39f50774">
 
 #### Month 
-When examining the trip count by month both types of members exhibit similar tendencies with usage peaking in the summer months and bottoming out during the winter months. 
+When examining the trip count by month, both types of members exhibit similar tendencies, with usage peaking in the summer months and bottoming out during the winter months.
 
 #### Day of Week 
-The trip count for members remains relatively consistent, holding throughout the weekday and slightly tapering off on the weekends. For casual riders, we observe a rider count significantly lower that remains steady from Monday to Thursday, picking up on Friday,  heavily picking up and crossing over on Saturday, and tapering off on Sunday. 
+The trip count for members remains relatively consistent, holding throughout the weekday and slightly tapering off on the weekends. For casual riders, we observe a rider count significantly lower that remains steady from Monday to Thursday, picking up on Friday, heavily picking up and crossing over on Saturday, and tapering off on Sunday.
 
 #### Hour of Day 
-In the last chart, we examine the rider count based on the hour of the day when a trip starts. Member usage picks up starting at 5 am, and peaks twice, once at 8 am and again at 5 pm and tapers off at 10 pm.  For casual members, we observe a steady increase in the number of trips beginning at 5 am, peaking at 5 pm then dropping off significantly by 8 pm. 
+In the last chart, we examine the rider count based on the hour of the day when a trip starts. Member usage picks up starting at 5 am, peaks twice, once at 8 am and again at 5 pm, and tapers off at 10 pm. For casual members, we observe a steady increase in the number of trips beginning at 5 am, peaking at 5 pm, then dropping off significantly by 8 pm.
 
 ####  Key Insights
-From the above time frames, we gather that both types of members are greatly affected by seasonality with the highest trip count occurring in July. Rider count by day of the week is reflective of the typical Monday-to-Friday commute. Usage by casual riders is fairly consistent throughout the week with a crossover on Saturdays most likely as a result of leisure activities. Trip count by hour of day for members is in line with the typical 9 am to 5 pm work schedule observing peaks at 8 am and 5 pm. 
+From the above time frames, we gather that both types of members are greatly affected by seasonality, with the highest trip count occurring in July. The rider count by day of the week is reflective of the typical Monday-to-Friday commute. Usage by casual riders is fairly consistent throughout the week with a crossover on Saturdays, most likely as a result of leisure activities. Trip count by the hour of the day for members is in line with the typical 9 am to 5 pm work schedule, observing peaks at 8 am and 5 pm.
 
 
 
@@ -129,16 +129,16 @@ Next, the average length of each trip in minutes is plotted against the month, d
 
 
 #### Month 
-Looking at the average trip duration in minutes, we notice that for annual members, trip duration remains constant, slightly increasing in the summer months. Trip duration for casual members is consistently higher throughout all months, peaks in May, and gradually tapers off at the end of the year. 
+Looking at the average trip duration in minutes, we notice that for annual members, trip duration remains constant, slightly increasing in the summer months. Trip duration for casual members is consistently higher throughout all months, peaks in May, and gradually tapers off at the end of the year.
 
 #### Day of Week
-For annual members, trip duration by day of the week remains constant throughout the weekdays and slightly increases on the weekend. Casual members have trip durations consistently higher throughout the entire week, with slightly elevated levels from Saturday to Monday. 
+For annual members, trip duration by day of the week remains constant throughout the weekdays and slightly increases on the weekend. Casual members have trip durations consistently higher throughout the entire week, with slightly elevated levels from Saturday to Monday.
 
 #### Hour of Day 
-Annual members exhibit a consistent trip duration throughout the hours of the day. Casual members display a moderate increase between 8 am to 5 pm with a slight drop off at 5 pm that is sustained until 3 am. 
+Annual members exhibit a consistent trip duration throughout the hours of the day. Casual members display a moderate increase between 8 am to 5 pm with a slight drop off at 5 pm that is sustained until 3 am.
 
 #### Key Insights
-Trip duration for annual members does not vary significantly between time frames. Casual member trip durations are consistently longer throughout all time frames. The difference in trip durations is in line with the nature of commutes for annual members and leisure trips for casual riders.  
+Trip duration for annual members does not vary significantly between time frames. Casual member trip durations are consistently longer throughout all time frames. The difference in trip durations is in line with the nature of commutes for annual members and leisure trips for casual riders.
 
 
 ## Act
@@ -156,9 +156,9 @@ Trip duration for annual members does not vary significantly between time frames
 ### Recommendations 
 
 1. Marketing campaigns should be targeted towards casual riders in the spring and summer with a focus on weekends. Can offer early bird discounts to incentivize subscriptions in the late winter/early spring to offset seasonality.
-2. Causl riders generally have longer trip durations and seldom use the service on weekdays, offering a weekend pass or flat rate bulk discount would be effective. 
-3. The most effective deployment of ad spend would be to users of classic and electric bikes, docked bikes have no utility in converting members
-4. Geographical analysis can be conducted to identify common hotspots for start and end locations. Trips originating from schools or hospitals can be used to identify organizations for collaboration/sponsorship (student/medical professional discounts). 
+2. Casual riders generally have longer trip durations and seldom use the service on weekdays, offering a weekend pass or flat rate bulk discount would be effective.
+3. The most effective deployment of ad spend would be to users of classic and electric bikes; docked bikes have no utility in converting members.
+4. Geographical analysis can be conducted to identify common hotspots for start and end locations. Trips originating from schools or hospitals can be used to identify organizations for collaboration/sponsorship (student/medical professional discounts).
 
 
 
