@@ -164,7 +164,7 @@ Trip duration for annual members does not vary significantly between time frames
 1. Marketing campaigns should target casual riders in the spring and summer focusing on weekends. An alternative could be to offer early bird discounts to incentivize subscriptions in the late winter/early spring to offset seasonality.
 2. Casual riders generally have longer trip durations and seldom use the service on weekdays, offering a weekend pass or 5/10/20 pack could appeal better to their budgets. 
 3. The most effective deployment of ad spend would be to users of classic and electric bikes; docked bikes have no utility in converting members.
-4. Geographical analysis can be conducted to identify common hotspots for start and end locations. Trips originating from schools or hospitals can be used to identify organizations for collaboration/sponsorship (student/medical professional discounts). To better understand this relationship data could be collected to provide the nearest type/s of landmark/s (school, museum, movie theatre, subway station, etc.) 
+4. Geographical analysis can be conducted to identify common hotspots for start and end locations. Trips originating from schools or hospitals can be used to identify organizations for collaboration/sponsorship (student/medical professional discounts). More data regarding the nearest type/s of landamrk/s (school, museum, movie theatre, subway station, etc.) would need to be collected to measure the impact of location. 
 
 
 
