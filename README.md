@@ -95,7 +95,7 @@ SQL Query: [Data Analysis](https://github.com/c-justin/Google_Data_Analytics_Cap
 
 Tableau Visualization: [Dashboards](https://public.tableau.com/app/profile/justin.chiu5869/viz/GDACTableau_17031313922010/RideType)
 
-Utilizing the cleaned dataset, I conducted table queries to analyze distinctions across various field types. The findings were subsequently visualized in Tableau. In line with guiding questions, our initial exploration centers on understanding the disparities between casual riders and annual members. Key aspects under consideration include:
+Utilizing the cleaned dataset, I conducted queries to produce tables based on each major field. The findings were subsequently visualized in Tableau. In line with guiding questions, our initial exploration centers on understanding the disparities between casual riders and annual members. Key aspects under consideration include:
 
 ### Types of Bikes Used in 2022
 I first examined the percentage of users based on each type of bike, further segmented by member type, with blue representing casual riders and orange representing annual members.
@@ -164,7 +164,7 @@ Trip duration for annual members does not vary significantly between time frames
 1. Marketing campaigns should target casual riders in the spring and summer focusing on weekends. An alternative could be to offer early bird discounts to incentivize subscriptions in the late winter/early spring to offset seasonality.
 2. Casual riders generally have longer trip durations and seldom use the service on weekdays, offering a weekend pass or 5/10/20 pack could appeal better to their budgets. 
 3. The most effective deployment of ad spend would be to users of classic and electric bikes; docked bikes have no utility in converting members.
-4. Geographical analysis can be conducted to identify common hotspots for start and end locations. Trips originating from schools or hospitals can be used to identify organizations for collaboration/sponsorship (student/medical professional discounts).
+4. Geographical analysis can be conducted to identify common hotspots for start and end locations. Trips originating from schools or hospitals can be used to identify organizations for collaboration/sponsorship (student/medical professional discounts). To better understand this relationship data could be collected to provide the nearest type/s of landmark/s (school, museum, movie theatre, subway station, etc.) 
 
 
 
