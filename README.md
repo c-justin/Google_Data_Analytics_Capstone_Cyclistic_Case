@@ -34,7 +34,7 @@ I will utilize 12 csv files with the following naming convention: YYYYMM-divvy-t
 Given the worksheet limitation of 1,048,576 rows in Microsoft Excel, we will be using BigQuery to clean and analyze the data which contains over 5.6 million rows. 
 
 ### Combining the Data
-To merge the 12 CSV files, I employed the batch upload operation in BigQuery. Initially, I uploaded all the files to a Google Cloud Storage bucket named gc_cyclist_data. Subsequently, I utilized the wildcard function to upload and append the content of the 12 CSV files into a single table named [2022_trip_data_raw](https://console.cloud.google.com/bigquery?hl=en&project=voltaic-spider-405020&ws=!1m5!1m4!4m3!1svoltaic-spider-405020!2sCyclist_Data!3s2022_trip_data_raw). This approach was feasible due to the consistent schema across all files.
+To merge the 12 CSV files, I employed the batch upload operation in BigQuery. Initially, I uploaded all the files to a Google Cloud Storage bucket named gc_cyclist_data. Subsequently, I utilized the wildcard function to upload and append the content of the 12 CSV files into a single table named [2022_trip_data_raw](https://console.cloud.google.com/bigquery?hl=en&project=voltaic-spider-405020&ws=!1m5!1m4!4m3!1svoltaic-spider-405020!2sCyclist_Data!3s2022_trip_data_raw). This approach was feasible due to the consistent schema across all files. Once amalgamated, I would then query for tables to demonstrate the difference between members and casual riders in the following categories: rider type, trip count, and trip duration. 
 
 ### Data Exploration
 
@@ -119,7 +119,7 @@ When examining the trip count by month, both types of members exhibit similar te
 The trip count for members remains relatively consistent, holding throughout the weekday and slightly tapering off on the weekends. For casual riders, we observe a rider count significantly lower that remains steady from Monday to Thursday, picking up on Friday, heavily picking up and crossing over on Saturday, and tapering off on Sunday.
 
 #### Hour of Day 
-In the last chart, we examine the rider count based on the hour of the day when a trip starts. Member usage picks up starting at 5 am, peaks twice, once at 8 am and again at 5 pm, and tapers off at 10 pm. For casual members, we observe a steady increase in the number of trips beginning at 5 am, peaking at 5 pm, then dropping off significantly by 8 pm.
+In the last chart, we examine the rider count based on the hour of the day when a trip starts. Member usage picks up starting at 5 am, peaks twice, once at 8 am and again at 5 pm and tapers off at 10 pm. For casual members, we observe a steady increase in the number of trips beginning at 5 am, peaking at 5 pm, then dropping off significantly by 8 pm.
 
 ####  Key Insights
 From the above time frames, we gather that both types of members are greatly affected by seasonality, with the highest trip count occurring in July. The rider count by day of the week is reflective of the typical Monday-to-Friday commute. Usage by casual riders is fairly consistent throughout the week with a crossover on Saturdays, most likely as a result of leisure activities. Trip count by the hour of the day for members is in line with the typical 9 am to 5 pm work schedule, observing peaks at 8 am and 5 pm.
@@ -161,8 +161,8 @@ Trip duration for annual members does not vary significantly between time frames
 
 ### Recommendations 
 
-1. Marketing campaigns should be targeted towards casual riders in the spring and summer with a focus on weekends. Can offer early bird discounts to incentivize subscriptions in the late winter/early spring to offset seasonality.
-2. Casual riders generally have longer trip durations and seldom use the service on weekdays, offering a weekend pass or flat rate bulk discount would be effective.
+1. Marketing campaigns should target casual riders in the spring and summer focusing on weekends. An alternative could be to offer early bird discounts to incentivize subscriptions in the late winter/early spring to offset seasonality.
+2. Casual riders generally have longer trip durations and seldom use the service on weekdays, offering a weekend pass or 5/10/20 pack could appeal better to their budgets. 
 3. The most effective deployment of ad spend would be to users of classic and electric bikes; docked bikes have no utility in converting members.
 4. Geographical analysis can be conducted to identify common hotspots for start and end locations. Trips originating from schools or hospitals can be used to identify organizations for collaboration/sponsorship (student/medical professional discounts).
 
